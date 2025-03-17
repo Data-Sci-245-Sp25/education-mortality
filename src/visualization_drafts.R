@@ -21,4 +21,4 @@ educCancerRatesOverall <- educCancerRates |>
   summarize(total_death_rate = sum(rate_per_100k, na.rm = TRUE)/10) |>
   ungroup()
 ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y = total_death_rate, fill=ddeduc)) +
-  geom_col() + facet_wrap(~category)
+  geom_col() + facet_wrap(~category) 
