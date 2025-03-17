@@ -12,9 +12,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Emily",
+    "title": "Sophie",
     "section": "",
-    "text": "Emily\n\n\n&lt;a class=\"navbar-brand\" href=\"#\"&gt;Navbar&lt;/a&gt;\n&lt;button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarColor01\" aria-controls=\"navbarColor01\" aria-expanded=\"false\" aria-label=\"Toggle navigation\"&gt;\n  &lt;span class=\"navbar-toggler-icon\"&gt;&lt;/span&gt;\n&lt;/button&gt;\n&lt;div class=\"collapse navbar-collapse\" id=\"navbarColor01\"&gt;\n  &lt;ul class=\"navbar-nav me-auto\"&gt;\n    &lt;li class=\"nav-item\"&gt;\n      &lt;a class=\"nav-link active\" href=\"#\"&gt;Home\n        &lt;span class=\"visually-hidden\"&gt;(current)&lt;/span&gt;\n      &lt;/a&gt;\n    &lt;/li&gt;\n    &lt;li class=\"nav-item\"&gt;\n      &lt;a class=\"nav-link\" href=\"#\"&gt;Features&lt;/a&gt;\n    &lt;/li&gt;\n    &lt;li class=\"nav-item\"&gt;\n      &lt;a class=\"nav-link\" href=\"#\"&gt;Pricing&lt;/a&gt;\n    &lt;/li&gt;\n    &lt;li class=\"nav-item\"&gt;\n      &lt;a class=\"nav-link\" href=\"#\"&gt;About&lt;/a&gt;\n    &lt;/li&gt;\n    &lt;li class=\"nav-item dropdown\"&gt;\n      &lt;a class=\"nav-link dropdown-toggle\" data-bs-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\"&gt;Dropdown&lt;/a&gt;\n      &lt;div class=\"dropdown-menu\"&gt;\n        &lt;a class=\"dropdown-item\" href=\"#\"&gt;Action&lt;/a&gt;\n        &lt;a class=\"dropdown-item\" href=\"#\"&gt;Another action&lt;/a&gt;\n        &lt;a class=\"dropdown-item\" href=\"#\"&gt;Something else here&lt;/a&gt;\n        &lt;div class=\"dropdown-divider\"&gt;&lt;/div&gt;\n        &lt;a class=\"dropdown-item\" href=\"#\"&gt;Separated link&lt;/a&gt;\n      &lt;/div&gt;\n    &lt;/li&gt;\n  &lt;/ul&gt;\n  &lt;form class=\"d-flex\"&gt;\n    &lt;input class=\"form-control me-sm-2\" type=\"search\" placeholder=\"Search\"&gt;\n    &lt;button class=\"btn btn-secondary my-2 my-sm-0\" type=\"submit\"&gt;Search&lt;/button&gt;\n  &lt;/form&gt;\n&lt;/div&gt;",
+    "text": "Sophie",
     "crumbs": [
       "Home"
     ]
