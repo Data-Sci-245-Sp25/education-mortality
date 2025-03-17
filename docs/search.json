@@ -4,7 +4,10 @@
     "href": "background.html",
     "title": "Sophie",
     "section": "",
-    "text": "Sophie"
+    "text": "Sophie",
+    "crumbs": [
+      "Background"
+    ]
   },
   {
     "objectID": "index.html",
@@ -21,21 +24,30 @@
     "href": "purpose.html",
     "title": "Sophie",
     "section": "",
-    "text": "Sophie"
+    "text": "Sophie",
+    "crumbs": [
+      "Purpose of Research"
+    ]
   },
   {
     "objectID": "results.html",
     "href": "results.html",
     "title": "Emily",
     "section": "",
-    "text": "Emily"
+    "text": "Emily",
+    "crumbs": [
+      "Results and Findings"
+    ]
   },
   {
     "objectID": "methods.html",
     "href": "methods.html",
     "title": "Emily",
     "section": "",
-    "text": "Emily"
+    "text": "Emily",
+    "crumbs": [
+      "Methods"
+    ]
   },
   {
     "objectID": "abstract.html",
@@ -52,6 +64,9 @@
     "href": "conclusion.html",
     "title": "Sophie",
     "section": "",
-    "text": "Sophie"
+    "text": "Sophie",
+    "crumbs": [
+      "Conclusion"
+    ]
   }
 ]
