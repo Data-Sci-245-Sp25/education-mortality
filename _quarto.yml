@@ -8,10 +8,20 @@ website:
   sidebar:
     style: "docked"
     contents:
-      - href: index.qmd #person A
+      - href: index.qmd #Sophie
         text: Home
-      - href: abstract.qmd #person B
+      - href: abstract.qmd #Sophie
         text: Abstract
+      - href: index.qmd #Sophie
+        text: Background
+      - href: index.qmd #Sophie
+        text: Purpose of Research
+      - href: index.qmd #Emily
+        text: Methods
+      - href: index.qmd #Emily
+        text: Results and Findings
+      - href: index.qmd #Sophie
+        text: Conclusion
 
 format:
   html:
