@@ -1,24 +1,7 @@
 [
   {
-    "objectID": "abstract.html",
-    "href": "abstract.html",
-    "title": "Sophie",
-    "section": "",
-    "text": "Sophie",
-    "crumbs": [
-      "Abstract"
-    ]
-  },
-  {
-    "objectID": "results.html",
-    "href": "results.html",
-    "title": "Emily",
-    "section": "",
-    "text": "Emily"
-  },
-  {
-    "objectID": "purpose.html",
-    "href": "purpose.html",
+    "objectID": "background.html",
+    "href": "background.html",
     "title": "Sophie",
     "section": "",
     "text": "Sophie"
@@ -34,11 +17,18 @@
     ]
   },
   {
-    "objectID": "background.html",
-    "href": "background.html",
+    "objectID": "purpose.html",
+    "href": "purpose.html",
     "title": "Sophie",
     "section": "",
     "text": "Sophie"
+  },
+  {
+    "objectID": "results.html",
+    "href": "results.html",
+    "title": "Emily",
+    "section": "",
+    "text": "Emily"
   },
   {
     "objectID": "methods.html",
@@ -46,6 +36,16 @@
     "title": "Emily",
     "section": "",
     "text": "Emily"
+  },
+  {
+    "objectID": "abstract.html",
+    "href": "abstract.html",
+    "title": "Sophie",
+    "section": "",
+    "text": "Sophie",
+    "crumbs": [
+      "Abstract"
+    ]
   },
   {
     "objectID": "conclusion.html",

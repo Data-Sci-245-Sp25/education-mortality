@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "My Analytics Project"
+  title: "Examening Education and Cancer Mortality"
   search: false
   sidebar:
     style: "docked"
@@ -15,7 +15,7 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme: superhero
     css: style.css
     toc: true
     code-fold: true
