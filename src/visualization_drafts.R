@@ -1,5 +1,12 @@
 install.packages("tidyverse")
 library(tidyverse)
+install.packages("sf")
+library(sf)
+install.packages("viridis")
+library(viridis)
+
+common_educ <- st_read("data/common_educ.gpkg")
+hs_above_rate <- st_read("data/hs_above_rate.gpkg")
 
 # change ddeduc into a factor 
 educCancerRates$ddeduc <- as.factor(educCancerRates$ddeduc)
@@ -55,4 +62,10 @@ ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate, co
   geom_point() + geom_line()
 
 # MAPS (may need to re-merge data with tidycensus...)
-ggplot() + geom_sf(data= educCancerRates, aes(fill=educCancerRates$rate_per_100k))
+#ggplot() + geom_sf(data= educCancerRates, aes(fill=educCancerRates$rate_per_100k))
+
+# EDUCATION MAPS
+ggplot(common_educ) + geom_sf(mapping=aes(fill = variable))
+
+ggplot(hs_above_rate) + geom_sf(mapping=aes(fill = rate))+ scale_fill_viridis(option = "plasma") +
+  theme_minimal()
