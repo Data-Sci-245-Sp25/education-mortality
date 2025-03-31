@@ -1,4 +1,4 @@
-# Sophie
+<h1>Background</h1>
 <p>Research indicates a significant inverse relationship between educational attainment and cancer mortality rates in the United States. Individuals with lower levels of education experience higher cancer mortality rates compared to those with higher education levels.</p>
 <p>A study analyzing data from 8.2 million death certificates between 1989 and 2018 found that individuals with less than a high school diploma had higher cancer mortality rates than their more educated counterparts. This disparity was more pronounced among non-Hispanic white males and females compared to non-Hispanic black individuals. The study also noted that while cancer mortality rates have declined overall, the reduction was less significant among individuals with lower educational attainment, leading to a widening mortality gap over time.</p>
 <p><small>The role of education on Cancer amenable mortality among non-Hispanic blacks & non-Hispanic whites in the United States (1989–2018)
