@@ -2,7 +2,7 @@
 
 Emily
 
-```{r echo=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 # setup
 library(tidyverse)
 library(sf)
