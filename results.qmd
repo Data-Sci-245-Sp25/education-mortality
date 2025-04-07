@@ -52,7 +52,7 @@ cancerRatesOverall <- cancerRatesOverall |>
 
 
 
-```{r}
+```{r echo=FALSE}
 
 ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate, color=category))+
   geom_point() + geom_line()+ labs(title="Education Level vs Death Rate by Disease Site", x="Education Level", y="Avg Death Rate Per 100k")+
