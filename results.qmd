@@ -1,7 +1,8 @@
 <h1>Results</h1>
+
 Emily
 
-```{r}
+```{r echo=FALSE}
 # setup
 library(tidyverse)
 library(sf)
@@ -50,8 +51,6 @@ cancerRatesOverall <- cancerRatesOverall |>
 
 ```
 
-
-
 ```{r echo=FALSE}
 
 ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate, color=category))+
@@ -70,4 +69,3 @@ ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate, co
     ), labels=c("Breast", "Colon", "Lung", "Lymphatic or Blood",
                 "Pancreas"))
 ```
-
