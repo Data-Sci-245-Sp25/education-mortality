@@ -10,6 +10,8 @@ library(viridis)
 library(gganimate)
 library(gifski)
 
+suppressMessages(library(ggplot2))
+
 educCancerRates <- read.csv("data/educCancerRates.csv")
 
 # change ddeduc into a factor 
