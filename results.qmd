@@ -2,7 +2,58 @@
 Emily
 
 ```{r}
+# setup
+library(tidyverse)
+library(sf)
+library(viridis)
+library(gganimate)
+library(gifski)
+
+educCancerRates <- read.csv("data/educCancerRates.csv")
+
+# change ddeduc into a factor 
+educCancerRates$ddeduc <- as.factor(educCancerRates$ddeduc)
+
+# remove "unknown" education category (wasn't included in tidycensus)
+educCancerRates <- educCancerRates |>
+  filter(ddeduc!="9")
+
+educCancerRatesOverall <- educCancerRates |>
+  group_by(category, ddeduc) |>
+  summarize(total_deaths = sum(total, na.rm = TRUE)) |>
+  ungroup()
+
+educCancerRatesOverall <- educCancerRates |>
+  group_by(category, ddeduc) |>
+  summarize(total_death_rate = sum(rate_per_100k, na.rm = TRUE)/10) |> 
+  ungroup()
 educCancerRatesOverall$ddeduc <- as.numeric(educCancerRatesOverall$ddeduc)
+
+cancerRatesOverall <- educCancerRates |>
+  group_by(category, ddodyear) |>
+  summarize(total_death_rate = sum(rate_per_100k, na.rm = TRUE)/9) |> 
+  arrange(desc(total_death_rate))|>
+  ungroup()
+
+educRatesOverall <- educCancerRates |>
+  group_by(ddeduc) |>
+  summarize(total_death_rate = sum(rate_per_100k, na.rm = TRUE)/50) |> 
+  arrange(desc(total_death_rate))|>
+  ungroup()
+educRatesOverall$ddeduc <- as.numeric(educRatesOverall$ddeduc)
+
+
+cancerRatesOverall <- cancerRatesOverall |>
+  group_by(ddodyear) |>
+  mutate(category_ordered = fct_reorder2(category, ddodyear, total_death_rate))
+
+
+```
+
+
+
+```{r}
+
 ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate, color=category))+
   geom_point() + geom_line()+ labs(title="Education Level vs Death Rate by Disease Site", x="Education Level", y="Avg Death Rate Per 100k")+
   theme(
