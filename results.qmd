@@ -1,2 +1,22 @@
 <h1>Results</h1>
 Emily
+
+```{r}
+educCancerRatesOverall$ddeduc <- as.numeric(educCancerRatesOverall$ddeduc)
+ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate, color=category))+
+  geom_point() + geom_line()+ labs(title="Education Level vs Death Rate by Disease Site", x="Education Level", y="Avg Death Rate Per 100k")+
+  theme(
+    plot.title = element_text(
+      hjust = 0.5,     # 0 = left, 0.5 = center, 1 = right
+      size = 15,       # Font size
+      #face = "bold"    # Optional: makes it bold
+    ))+ labs(color = "Disease Site")+ scale_color_manual(values = c(
+      "#56B4E9",  
+      "#D55E00",  
+      "#E69F00",  
+      "#CC79A7", 
+      "#009E73"   
+    ), labels=c("Breast", "Colon", "Lung", "Lymphatic or Blood",
+                "Pancreas"))
+```
+

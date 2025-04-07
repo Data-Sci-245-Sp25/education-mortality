@@ -4,6 +4,10 @@ install.packages("sf")
 library(sf)
 install.packages("viridis")
 library(viridis)
+install.packages("gganimate")
+library(gganimate)
+install.packages("gifski")
+library(gifski)
 
 common_educ <- st_read("data/common_educ.gpkg")
 hs_above_rate <- st_read("data/hs_above_rate.gpkg")
@@ -15,16 +19,16 @@ educCancerRates <- educCancerRates |>
   filter(ddeduc!="9")
 # line graphs over time by cancer type and education
 ggplot(data=educCancerRates, mapping=aes(x=ddodyear, y=rate_per_100k, color=ddeduc))+
-  geom_line() + facet_wrap(~category) + labs(title= "Cancer Rates by Education Over Time", x="Year", y="Death Rate Per 100k People") +
+  geom_line() + facet_wrap(~category, nrow=1) + labs(title= "Cancer Rates by Education Over Time", x="Year", y="Death Rate Per 100k People") +
   theme_minimal() + labs(color = "Education Level") + scale_color_manual(values = c(
-    "#E69F00",  # orange
-    "#56B4E9",  # sky blue
-    "#009E73",  # teal
-    "#F0E442",  # yellow
-    "#0072B2",  # blue
-    "#D55E00",  # reddish orange
-    "#CC79A7",  # pink
-    "#999999"   # gray
+    "#D35400",  # Dark orange
+    "#C7642C",
+    "#B67B4A",
+    "#A39268",
+    "#8DA0A0",
+    "#6F8AB3",
+    "#4B6CA6",
+    "#3B4C75"   # Lighter navy
   ), labels=c("8th Grade or Less", "HS (no diploma)", "HS Diploma/GED", "Some College",
                       "Associates", "Bachelor's", "Masters", "Doctorate/Professional")) + 
   theme(
@@ -32,8 +36,15 @@ ggplot(data=educCancerRates, mapping=aes(x=ddodyear, y=rate_per_100k, color=dded
       hjust = 0.5,     # 0 = left, 0.5 = center, 1 = right
       size = 15,       # Font size
       #face = "bold"    # Optional: makes it bold
+      family = "Lato"
     )
   )
+# colors to use for disease sites: 
+"#4e5d6c"
+"#5cb85c"
+"#5bc0de"
+"#d9534f"
+"#ffc107"
 
 # overall counts (no rates)
 educCancerRatesOverall <- educCancerRates |>
@@ -51,21 +62,21 @@ educCancerRatesOverall <- educCancerRates |>
 ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y = total_death_rate, fill=ddeduc)) +
   geom_col() + facet_wrap(~category) + labs(title= "Cancer Rates by Education", x="Education Level", y="Death Rate Per 100k People") +
   theme_minimal() + labs(color = "Education Level") + scale_fill_manual(values = c(
-    "#E69F00",  # orange
-    "#56B4E9",  # sky blue
-    "#009E73",  # teal
-    "#F0E442",  # yellow
-    "#0072B2",  # blue
-    "#D55E00",  # reddish orange
-    "#CC79A7",  # pink
-    "#999999"   # gray
+    "#D35400",  # Dark orange
+    "#C7642C",
+    "#B67B4A",
+    "#A39268",
+    "#8DA0A0",
+    "#6F8AB3",
+    "#4B6CA6",
+    "#3B4C75"   # Lighter navy
   ), labels=c("1: 8th Grade or Less", "2: HS (no diploma)", "3: HS Diploma/GED", "4: Some College",
               "5: Associates", "6: Bachelor's", "7: Masters", "8: Doctorate/Professional")) + 
   theme(
     plot.title = element_text(
       hjust = 0.5,     # 0 = left, 0.5 = center, 1 = right
       size = 15,       # Font size
-      #face = "bold"    # Optional: makes it bold
+      face = "bold"    # Optional: makes it bold
     )
   )
 
@@ -171,6 +182,9 @@ ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate, co
       "#009E73"   
     ), labels=c("Breast", "Colon", "Lung", "Lymphatic or Blood",
                 "Pancreas"))
++
+  transition_reveal(ddeduc)
+anim_save("287-smooth-animation-with-tweenr.gif")
 
 # MAPS (may need to re-merge data with tidycensus...)
 #ggplot() + geom_sf(data= educCancerRates, aes(fill=educCancerRates$rate_per_100k))
