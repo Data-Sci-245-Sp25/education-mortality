@@ -61,10 +61,8 @@ cancerRatesOverall <- cancerRatesOverall |>
 <img src="src/educ_deaths_cancer.gif" alt="Animation" style="width:100%;"/>
 :::
 
-<!--![](src/educ_deaths_cancer.gif)-->
-
 ::: {style="flex: 1;"}
-```{r echo=FALSE, fig.width=5, fig.height=3}
+```{r echo=FALSE, fig.width=10, fig.height=5}
 # line plot of educ x death rate stratified by cancer type 
 ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate, color=category))+
   geom_point() + geom_line()+ labs(title="Education Level vs Death Rate by Disease Site", x="Education Level", y="Avg Death Rate Per 100k")+
@@ -160,8 +158,11 @@ ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y = (total_death_rate)
     )
   ) # level 3 has the most death rates
 ```
-
-![](src/time_deaths_cancer.gif)
+<div style="display: flex; gap: 20px; align-items: center;">
+<div style="flex: 1;">
+  <img src="src/time_deaths_cancer.gif" alt="Animation" style="width:100%;">
+</div>
+<div style="flex: 1;">
 
 ```{r echo=FALSE, fig.width=5, fig.height=3}
 # top cancers per year line chart 
@@ -184,7 +185,7 @@ ggplot(data=cancerRatesOverall, mapping=aes(x=ddodyear, y=total_death_rate, colo
     )
   ) 
 ```
-
+</div> </div>
 ```{r}
 ggplot(data=educRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate))+
   geom_point() + geom_smooth(method="lm") + labs(title="Education Level vs Cancer Death Rate", x="Education Level", y="Avg Death Rate Per 100k")+
