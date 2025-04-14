@@ -10,8 +10,10 @@ library(viridis)
 library(gganimate)
 library(gifski)
 
+# make sure no messages pop up on website
 suppressMessages(library(ggplot2))
 
+# read in data
 educCancerRates <- read.csv("data/educCancerRates.csv")
 
 # change ddeduc into a factor 
@@ -21,53 +23,216 @@ educCancerRates$ddeduc <- as.factor(educCancerRates$ddeduc)
 educCancerRates <- educCancerRates |>
   filter(ddeduc!="9")
 
-educCancerRatesOverall <- educCancerRates |>
-  group_by(category, ddeduc) |>
-  summarize(total_deaths = sum(total, na.rm = TRUE)) |>
-  ungroup()
-
+# create "overall" data frame not stratified by cancer type 
 educCancerRatesOverall <- educCancerRates |>
   group_by(category, ddeduc) |>
   summarize(total_death_rate = sum(rate_per_100k, na.rm = TRUE)/10) |> 
   ungroup()
+# turn ddeduc into numeric so line charts work
 educCancerRatesOverall$ddeduc <- as.numeric(educCancerRatesOverall$ddeduc)
 
+# create "overall" data frame not stratified by education
 cancerRatesOverall <- educCancerRates |>
   group_by(category, ddodyear) |>
   summarize(total_death_rate = sum(rate_per_100k, na.rm = TRUE)/9) |> 
   arrange(desc(total_death_rate))|>
   ungroup()
 
+# create "overall" data frame not stratified by year/cancer type
 educRatesOverall <- educCancerRates |>
   group_by(ddeduc) |>
   summarize(total_death_rate = sum(rate_per_100k, na.rm = TRUE)/50) |> 
   arrange(desc(total_death_rate))|>
   ungroup()
+# turn ddeduc into numeric so line charts work
 educRatesOverall$ddeduc <- as.numeric(educRatesOverall$ddeduc)
 
-
+# create "overall" data frame not stratified by educ or cancer type
 cancerRatesOverall <- cancerRatesOverall |>
   group_by(ddodyear) |>
   mutate(category_ordered = fct_reorder2(category, ddodyear, total_death_rate))
 
+#knitr::opts_chunk$set(fig.width=10, fig.height=5)
 
 ```
 
-```{r echo=FALSE}
+::: {style="display: flex; gap: 20px; align-items: center;"}
+::: {style="flex: 1;"}
+<img src="src/educ_deaths_cancer.gif" alt="Animation" style="width:100%;"/>
+:::
 
+::: {style="flex: 1;"}
+```{r echo=FALSE, fig.width=10, fig.height=5}
+# line plot of educ x death rate stratified by cancer type 
 ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate, color=category))+
   geom_point() + geom_line()+ labs(title="Education Level vs Death Rate by Disease Site", x="Education Level", y="Avg Death Rate Per 100k")+
   theme(
     plot.title = element_text(
       hjust = 0.5,     # 0 = left, 0.5 = center, 1 = right
       size = 15,       # Font size
-      #face = "bold"    # Optional: makes it bold
+      face = "bold",    # Optional: makes it bold
+      family = "Lato"
     ))+ labs(color = "Disease Site")+ scale_color_manual(values = c(
-      "#56B4E9",  
-      "#D55E00",  
-      "#E69F00",  
-      "#CC79A7", 
-      "#009E73"   
+      "#4e5d6c",
+      "#5cb85c",
+      "#5bc0de",
+      "#d9534f",
+      "#ffc107"
     ), labels=c("Breast", "Colon", "Lung", "Lymphatic or Blood",
-                "Pancreas"))
+                "Pancreas")) 
+```
+:::
+:::
+
+```{r echo=FALSE, fig.width=15, fig.height=5}
+# line plots over time by cancer type and education
+ggplot(data=educCancerRates, mapping=aes(x=ddodyear, y=rate_per_100k, color=ddeduc))+ geom_point() +
+  geom_line() + facet_wrap(~category) + labs(title= "Cancer Rates by Education Over Time", x="Year", y="Death Rate Per 100k People") +
+  theme_minimal() + labs(color = "Education Level") + scale_color_manual(values = c(
+    "#D35400",  # Burnt orange
+    "#C77938",  # Copper
+    "#B4985C",  # Khaki brown
+    "#9FA58D",  # Desaturated olive
+    "#7E94A9",  # Dusty blue
+    "#5D7EB2",  # Blue-gray
+    "#3F5FA3",  # Rich blue
+    "#2C3E50"   # Navy   
+  ), labels=c("8th Grade or Less", "Some HS (No Degree)", "HS Diploma/GED", "Some College (No Degree)",
+                      "Associates", "Bachelor's", "Master's", "Doctorate/Professional")) + 
+  theme(
+    plot.title = element_text(
+      hjust = 0.5,     # 0 = left, 0.5 = center, 1 = right
+      size = 15,       # Font size
+      face = "bold",    # Optional: makes it bold
+      family = "Lato"
+    )
+  )
+```
+
+```{r echo=FALSE}
+educCancerRatesOverall$ddeduc <- as.factor(educCancerRatesOverall$ddeduc)
+ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y = total_death_rate, fill=ddeduc)) +
+  geom_col() + facet_wrap(~category, nrow=1) + labs(title= "Cancer Rates by Education", x="Education Level", y="Death Rate Per 100k People") +
+  theme_minimal() + labs(color = "Education Level") + scale_fill_manual(values = c(
+    "#D35400",  # Burnt orange
+    "#C77938",  # Copper
+    "#B4985C",  # Khaki brown
+    "#9FA58D",  # Desaturated olive
+    "#7E94A9",  # Dusty blue
+    "#5D7EB2",  # Blue-gray
+    "#3F5FA3",  # Rich blue
+    "#2C3E50"   # Navy  
+  ), labels=c("1: 8th Grade or Less", "2: Some HS (No Degree)", "3: HS Diploma/GED", "4: Some College (No Degree)",
+              "5: Associates", "6: Bachelor's", "7: Master's", "8: Doctorate/Professional")) + 
+  theme(
+    plot.title = element_text(
+      hjust = 0.5,     # 0 = left, 0.5 = center, 1 = right
+      size = 15,       # Font size
+      face = "bold",    # Optional: makes it bold
+      family = "Lato"
+    )
+  )
+```
+
+```{r echo=FALSE}
+# bar graph of overall death rates by educ
+ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y = (total_death_rate), fill=ddeduc)) +
+  geom_col()+ labs(title= "Total Cancer Death Rates by Education", x="Education Level", y="Total Death Rate Per 100k People") +
+  theme_minimal() + labs(color = "Education Level") + scale_fill_manual(values = c(
+    "#D35400",  # Burnt orange
+    "#C77938",  # Copper
+    "#B4985C",  # Khaki brown
+    "#9FA58D",  # Desaturated olive
+    "#7E94A9",  # Dusty blue
+    "#5D7EB2",  # Blue-gray
+    "#3F5FA3",  # Rich blue
+    "#2C3E50"   # Navy
+  ), labels=c("1: 8th Grade or Less", "2: Some HS (No Degree)", "3: HS Diploma/GED", "4: Some College (No Degree)",
+              "5: Associates", "6: Bachelor's", "7: Master's", "8: Doctorate/Professional")) + 
+  theme(
+    plot.title = element_text(
+      hjust = 0.5,     # 0 = left, 0.5 = center, 1 = right
+      size = 15,       # Font size
+      face = "bold",    # Optional: makes it bold
+      family = "Lato"
+    )
+  ) # level 3 has the most death rates
+```
+<div style="display: flex; gap: 20px; align-items: center;">
+<div style="flex: 1;">
+  <img src="src/time_deaths_cancer.gif" alt="Animation" style="width:100%;">
+</div>
+<div style="flex: 1;">
+
+```{r echo=FALSE,fig.width=10, fig.height=5}
+# top cancers per year line chart 
+ggplot(data=cancerRatesOverall, mapping=aes(x=ddodyear, y=total_death_rate, color=category))+
+  geom_point() +geom_line()+ labs(title= "Top Cancers Over Time", x="Year", y="Total Death Rate Per 100k People") +
+  theme_minimal() + labs(fill = "Disease Site")+ scale_color_manual(values = c(
+    "#4e5d6c",
+    "#5cb85c",
+    "#5bc0de",
+    "#d9534f",
+    "#ffc107" 
+  ), labels=c("Breast", "Colon", "Lung", "Lymphatic or Blood",
+              "Pancreas")) + 
+  theme(
+    plot.title = element_text(
+      hjust = 0.5,     # 0 = left, 0.5 = center, 1 = right
+      size = 15,       # Font size
+      face = "bold",    # Optional: makes it bold
+      family = "Lato"
+    )
+  ) 
+```
+</div> </div>
+```{r echo=FALSE}
+ggplot(data=educRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate))+
+  geom_point() + geom_smooth(method="lm") + labs(title="Education Level vs Cancer Death Rate", x="Education Level", y="Avg Death Rate Per 100k")+
+  theme(
+    plot.title = element_text(
+      hjust = 0.5,     # 0 = left, 0.5 = center, 1 = right
+      size = 15,       # Font size
+      face = "bold",    # Optional: makes it bold
+      family = "Lato"
+    ))
+# p-value: .03624 (significant at alpha=5%)
+# R^2: 0.546, moderately strong correlation
+```
+
+```{r echo=FALSE}
+educCancerRatesOverall$ddeduc <- as.numeric(educCancerRatesOverall$ddeduc)
+
+r2_labels <- educCancerRatesOverall |>
+  group_by(category) |>
+  do({
+    model <- lm(total_death_rate ~ ddeduc, data = .)
+    r2 <- summary(model)$r.squared
+    tibble(
+      category = unique(.$category),
+      label = paste0("R² = ", round(r2, 2)),
+      x = max(.$ddeduc),      # position for label on x-axis
+      y = predict(model, newdata = data.frame(ddeduc = max(.$ddeduc)))  # y value from model
+    )
+  })
+
+ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate, color=category))+
+  geom_point() + geom_smooth(method="lm", se=FALSE) + labs(title="Education Level vs Death Rate by Disease Site", x="Education Level", y="Avg Death Rate Per 100k")+
+  theme(
+    plot.title = element_text(
+      hjust = 0.5,     # 0 = left, 0.5 = center, 1 = right
+      size = 15,       # Font size
+      face = "bold",    # Optional: makes it bold
+      family = "Lato"
+    ))+ labs(color = "Disease Site")+ scale_color_manual(values = c(
+      "#4e5d6c",
+      "#5cb85c",
+      "#5bc0de",
+      "#d9534f",
+      "#ffc107"  
+    ), labels=c("Breast", "Colon", "Lung", "Lymphatic or Blood",
+                "Pancreas"))+
+  geom_text(data = r2_labels, aes(x = x, y = y, label = label, color = category),
+            hjust = 0, vjust = -0.5, size = 2, show.legend = FALSE)
+
 ```
