@@ -10,8 +10,10 @@ library(viridis)
 library(gganimate)
 library(gifski)
 
+# make sure no messages pop up on website
 suppressMessages(library(ggplot2))
 
+# read in data
 educCancerRates <- read.csv("data/educCancerRates.csv")
 
 # change ddeduc into a factor 
@@ -21,31 +23,31 @@ educCancerRates$ddeduc <- as.factor(educCancerRates$ddeduc)
 educCancerRates <- educCancerRates |>
   filter(ddeduc!="9")
 
-educCancerRatesOverall <- educCancerRates |>
-  group_by(category, ddeduc) |>
-  summarize(total_deaths = sum(total, na.rm = TRUE)) |>
-  ungroup()
-
+# create "overall" data frame not stratified by cancer type 
 educCancerRatesOverall <- educCancerRates |>
   group_by(category, ddeduc) |>
   summarize(total_death_rate = sum(rate_per_100k, na.rm = TRUE)/10) |> 
   ungroup()
+# turn ddeduc into numeric so line charts work
 educCancerRatesOverall$ddeduc <- as.numeric(educCancerRatesOverall$ddeduc)
 
+# create "overall" data frame not stratified by education
 cancerRatesOverall <- educCancerRates |>
   group_by(category, ddodyear) |>
   summarize(total_death_rate = sum(rate_per_100k, na.rm = TRUE)/9) |> 
   arrange(desc(total_death_rate))|>
   ungroup()
 
+# create "overall" data frame not stratified by year/cancer type
 educRatesOverall <- educCancerRates |>
   group_by(ddeduc) |>
   summarize(total_death_rate = sum(rate_per_100k, na.rm = TRUE)/50) |> 
   arrange(desc(total_death_rate))|>
   ungroup()
+# turn ddeduc into numeric so line charts work
 educRatesOverall$ddeduc <- as.numeric(educRatesOverall$ddeduc)
 
-
+# create "overall" data frame not stratified by educ or cancer type
 cancerRatesOverall <- cancerRatesOverall |>
   group_by(ddodyear) |>
   mutate(category_ordered = fct_reorder2(category, ddodyear, total_death_rate))
@@ -54,6 +56,7 @@ cancerRatesOverall <- cancerRatesOverall |>
 ```
 
 ```{r echo=FALSE}
+# Line plot of educ x death rate stratified by cancer type 
 
 ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate, color=category))+
   geom_point() + geom_line()+ labs(title="Education Level vs Death Rate by Disease Site", x="Education Level", y="Avg Death Rate Per 100k")+
@@ -70,4 +73,29 @@ ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate, co
       "#009E73"   
     ), labels=c("Breast", "Colon", "Lung", "Lymphatic or Blood",
                 "Pancreas"))
+```
+
+```{r echo=FALSE}
+# line graphs over time by cancer type and education
+ggplot(data=educCancerRates, mapping=aes(x=ddodyear, y=rate_per_100k, color=ddeduc))+
+  geom_line() + facet_wrap(~category, nrow=1) + labs(title= "Cancer Rates by Education Over Time", x="Year", y="Death Rate Per 100k People") +
+  theme_minimal() + labs(color = "Education Level") + scale_color_manual(values = c(
+    "#D35400",  # Burnt orange
+    "#C77938",  # Copper
+    "#B4985C",  # Khaki brown
+    "#9FA58D",  # Desaturated olive
+    "#7E94A9",  # Dusty blue
+    "#5D7EB2",  # Blue-gray
+    "#3F5FA3",  # Rich blue
+    "#2C3E50"   # Navy   
+  ), labels=c("8th Grade or Less", "Some HS (No Degree)", "HS Diploma/GED", "Some College (No Degree)",
+                      "Associates", "Bachelor's", "Master's", "Doctorate/Professional")) + 
+  theme(
+    plot.title = element_text(
+      hjust = 0.5,     # 0 = left, 0.5 = center, 1 = right
+      size = 15,       # Font size
+      #face = "bold"    # Optional: makes it bold
+      family = "Lato"
+    )
+  )
 ```

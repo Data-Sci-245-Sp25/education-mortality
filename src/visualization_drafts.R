@@ -21,16 +21,16 @@ educCancerRates <- educCancerRates |>
 ggplot(data=educCancerRates, mapping=aes(x=ddodyear, y=rate_per_100k, color=ddeduc))+
   geom_line() + facet_wrap(~category, nrow=1) + labs(title= "Cancer Rates by Education Over Time", x="Year", y="Death Rate Per 100k People") +
   theme_minimal() + labs(color = "Education Level") + scale_color_manual(values = c(
-    "#D35400",  # Dark orange
-    "#C7642C",
-    "#B67B4A",
-    "#A39268",
-    "#8DA0A0",
-    "#6F8AB3",
-    "#4B6CA6",
-    "#3B4C75"   # Lighter navy
-  ), labels=c("8th Grade or Less", "HS (no diploma)", "HS Diploma/GED", "Some College",
-                      "Associates", "Bachelor's", "Masters", "Doctorate/Professional")) + 
+    "#D35400",  # Burnt orange
+    "#C77938",  # Copper
+    "#B4985C",  # Khaki brown
+    "#9FA58D",  # Desaturated olive
+    "#7E94A9",  # Dusty blue
+    "#5D7EB2",  # Blue-gray
+    "#3F5FA3",  # Rich blue
+    "#2C3E50"   # Navy   
+  ), labels=c("8th Grade or Less", "Some HS (No Degree)", "HS Diploma/GED", "Some College (No Degree)",
+                      "Associates", "Bachelor's", "Master's", "Doctorate/Professional")) + 
   theme(
     plot.title = element_text(
       hjust = 0.5,     # 0 = left, 0.5 = center, 1 = right
@@ -39,6 +39,10 @@ ggplot(data=educCancerRates, mapping=aes(x=ddodyear, y=rate_per_100k, color=dded
       family = "Lato"
     )
   )
+
+
+
+
 # colors to use for disease sites: 
 "#4e5d6c"
 "#5cb85c"
@@ -116,11 +120,11 @@ cancerRatesOverall <- cancerRatesOverall |>
 ggplot(data=cancerRatesOverall, mapping=aes(x=ddodyear, y = total_death_rate, fill=category_ordered)) +
   geom_col(position="dodge")+ labs(title= "Top Cancers Over Time", x="Year", y="Total Death Rate Per 100k People") +
   theme_minimal() + labs(fill = "Disease Site")+ scale_fill_manual(values = c(
-      "#E69F00",  # orange
-      "#56B4E9",  # sky blue
-      "#009E73",  # teal green
-      "#D55E00",  # reddish orange
-      "#CC79A7"   # pink/magenta
+    "#4e5d6c",
+    "#5cb85c",
+    "#5bc0de",
+    "#d9534f",
+    "#ffc107"
     ), labels=c("Lung", "Breast", "Pancreas", "Colon",
               "Lymphati or Blood")) + 
   theme(
@@ -135,11 +139,11 @@ ggplot(data=cancerRatesOverall, mapping=aes(x=ddodyear, y = total_death_rate, fi
 ggplot(data=cancerRatesOverall, mapping=aes(x=ddodyear, y=total_death_rate, color=category))+
   geom_line()+ labs(title= "Top Cancers Over Time", x="Year", y="Total Death Rate Per 100k People") +
   theme_minimal() + labs(fill = "Disease Site")+ scale_color_manual(values = c(
-    "#56B4E9",  
-    "#D55E00",  
-    "#E69F00",  
-    "#CC79A7", 
-    "#009E73"   
+    "#4e5d6c",
+    "#5cb85c",
+    "#5bc0de",
+    "#d9534f",
+    "#ffc107" 
   ), labels=c("Breast", "Colon", "Lung", "Lymphatic or Blood",
               "Pancreas")) + 
   theme(
@@ -165,7 +169,7 @@ ggplot(data=educRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate))+
       size = 15,       # Font size
       #face = "bold"    # Optional: makes it bold
     ))
-# correlation separated by cancer types
+# to do: correlation separated by cancer types
 educCancerRatesOverall$ddeduc <- as.numeric(educCancerRatesOverall$ddeduc)
 ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate, color=category))+
   geom_point() + geom_line()+ labs(title="Education Level vs Death Rate by Disease Site", x="Education Level", y="Avg Death Rate Per 100k")+
@@ -175,16 +179,16 @@ ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate, co
       size = 15,       # Font size
       #face = "bold"    # Optional: makes it bold
     ))+ labs(color = "Disease Site")+ scale_color_manual(values = c(
-      "#56B4E9",  
-      "#D55E00",  
-      "#E69F00",  
-      "#CC79A7", 
-      "#009E73"   
+      "#4e5d6c",
+      "#5cb85c",
+      "#5bc0de",
+      "#d9534f",
+      "#ffc107"  
     ), labels=c("Breast", "Colon", "Lung", "Lymphatic or Blood",
                 "Pancreas"))
-+
-  transition_reveal(ddeduc)
-anim_save("287-smooth-animation-with-tweenr.gif")
+#+
+  #transition_reveal(ddeduc)
+#anim_save("287-smooth-animation-with-tweenr.gif")
 
 # MAPS (may need to re-merge data with tidycensus...)
 #ggplot() + geom_sf(data= educCancerRates, aes(fill=educCancerRates$rate_per_100k))
