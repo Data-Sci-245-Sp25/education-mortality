@@ -55,8 +55,9 @@ cancerRatesOverall <- cancerRatesOverall |>
 
 ```
 
-```{r echo=FALSE}
-knitr::opts_chunk$set(fig.width=10, fig.height=5)
+![](src/educ_deaths_cancer.gif)
+
+```{r echo=FALSE, fig.width=5, fig.height=3}
 # line plot of educ x death rate stratified by cancer type 
 ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate, color=category))+
   geom_point() + geom_line()+ labs(title="Education Level vs Death Rate by Disease Site", x="Education Level", y="Avg Death Rate Per 100k")+
@@ -76,9 +77,8 @@ ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate, co
                 "Pancreas")) 
 ```
 
-![](src/educ_deaths_cancer.gif)
-
 ```{r echo=FALSE}
+knitr::opts_chunk$set(fig.width=10, fig.height=5)
 # line plots over time by cancer type and education
 ggplot(data=educCancerRates, mapping=aes(x=ddodyear, y=rate_per_100k, color=ddeduc))+ geom_point() +
   geom_line() + facet_wrap(~category) + labs(title= "Cancer Rates by Education Over Time", x="Year", y="Death Rate Per 100k People") +
@@ -153,7 +153,9 @@ ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y = (total_death_rate)
   ) # level 3 has the most death rates
 ```
 
-```{r echo=FALSE}
+![](src/time_deaths_cancer.gif)
+
+```{r echo=FALSE, fig.width=5, fig.height=3}
 # top cancers per year line chart 
 ggplot(data=cancerRatesOverall, mapping=aes(x=ddodyear, y=total_death_rate, color=category))+
   geom_point() +geom_line()+ labs(title= "Top Cancers Over Time", x="Year", y="Total Death Rate Per 100k People") +
@@ -174,8 +176,6 @@ ggplot(data=cancerRatesOverall, mapping=aes(x=ddodyear, y=total_death_rate, colo
     )
   ) 
 ```
-
-![](src/time_deaths_cancer.gif)
 
 ```{r}
 ggplot(data=educRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate))+
