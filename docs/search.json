@@ -14,7 +14,7 @@
     "href": "results.html",
     "title": "\nResults\n",
     "section": "",
-    "text": "Results\n\nEmily\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode\nggplot(data=educRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate))+\n  geom_point() + geom_smooth(method=\"lm\") + labs(title=\"Education Level vs Cancer Death Rate\", x=\"Education Level\", y=\"Avg Death Rate Per 100k\")+\n  theme(\n    plot.title = element_text(\n      hjust = 0.5,     # 0 = left, 0.5 = center, 1 = right\n      size = 15,       # Font size\n      face = \"bold\",    # Optional: makes it bold\n      family = \"Lato\"\n    ))\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\nCode\n# p-value: .03624 (significant at alpha=5%)\n# R^2: 0.546, moderately strong correlation\n\n\n\n\n`geom_smooth()` using formula = 'y ~ x'",
+    "text": "Results\n\nEmily\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode\nggplot(data=educRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate))+\n  geom_point() + geom_smooth(method=\"lm\") + labs(title=\"Education Level vs Cancer Death Rate\", x=\"Education Level\", y=\"Avg Death Rate Per 100k\")+\n  theme(\n    plot.title = element_text(\n      hjust = 0.5,     # 0 = left, 0.5 = center, 1 = right\n      size = 15,       # Font size\n      face = \"bold\",    # Optional: makes it bold\n      family = \"Lato\"\n    ))\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\nCode\n# p-value: .03624 (significant at alpha=5%)\n# R^2: 0.546, moderately strong correlation\n\n\n\n\n`geom_smooth()` using formula = 'y ~ x'",
     "crumbs": [
       "Results and Findings"
     ]

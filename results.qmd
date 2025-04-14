@@ -52,11 +52,18 @@ cancerRatesOverall <- cancerRatesOverall |>
   group_by(ddodyear) |>
   mutate(category_ordered = fct_reorder2(category, ddodyear, total_death_rate))
 
+#knitr::opts_chunk$set(fig.width=10, fig.height=5)
 
 ```
 
-![](src/educ_deaths_cancer.gif)
+::: {style="display: flex; gap: 20px; align-items: center;"}
+::: {style="flex: 1;"}
+<img src="src/educ_deaths_cancer.gif" alt="Animation" style="width:100%;"/>
+:::
 
+<!--![](src/educ_deaths_cancer.gif)-->
+
+::: {style="flex: 1;"}
 ```{r echo=FALSE, fig.width=5, fig.height=3}
 # line plot of educ x death rate stratified by cancer type 
 ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate, color=category))+
@@ -76,9 +83,10 @@ ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate, co
     ), labels=c("Breast", "Colon", "Lung", "Lymphatic or Blood",
                 "Pancreas")) 
 ```
+:::
+:::
 
 ```{r echo=FALSE}
-knitr::opts_chunk$set(fig.width=10, fig.height=5)
 # line plots over time by cancer type and education
 ggplot(data=educCancerRates, mapping=aes(x=ddodyear, y=rate_per_100k, color=ddeduc))+ geom_point() +
   geom_line() + facet_wrap(~category) + labs(title= "Cancer Rates by Education Over Time", x="Year", y="Death Rate Per 100k People") +
