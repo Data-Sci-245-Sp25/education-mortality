@@ -275,3 +275,45 @@ ggplot(hs_above_rate) + geom_sf(mapping=aes(fill = rate))+ scale_fill_viridis(op
       size = 15,       # Font size
       #face = "bold"    # Optional: makes it bold
     ))
+
+# TESTING ANIMATION
+anim <- ggplot(data=cancerRatesOverall, mapping=aes(x=ddodyear, y=total_death_rate, color=category))+
+  geom_point() +geom_line()+ labs(title= "Top Cancers Over Time", x="Year", y="Total Death Rate Per 100k People") +
+  theme_minimal() + labs(fill = "Disease Site")+ scale_color_manual(values = c(
+    "#4e5d6c",
+    "#5cb85c",
+    "#5bc0de",
+    "#d9534f",
+    "#ffc107" 
+  ), labels=c("Breast", "Colon", "Lung", "Lymphatic or Blood",
+              "Pancreas")) + 
+  theme(
+    plot.title = element_text(
+      hjust = 0.5,     # 0 = left, 0.5 = center, 1 = right
+      size = 15,       # Font size
+      face = "bold",    # Optional: makes it bold
+      family = "Lato"
+    )
+  ) + transition_reveal(ddodyear)
+
+anim_save("src/time_deaths_cancer.gif", animation = anim)
+
+anim2 <- ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate, color=category))+
+  geom_point() + geom_line()+ labs(title="Education Level vs Death Rate by Disease Site", x="Education Level", y="Avg Death Rate Per 100k")+
+  theme(
+    plot.title = element_text(
+      hjust = 0.5,     # 0 = left, 0.5 = center, 1 = right
+      size = 15,       # Font size
+      face = "bold",    # Optional: makes it bold
+      family = "Lato"
+    ))+ labs(color = "Disease Site")+ scale_color_manual(values = c(
+      "#4e5d6c",
+      "#5cb85c",
+      "#5bc0de",
+      "#d9534f",
+      "#ffc107"
+    ), labels=c("Breast", "Colon", "Lung", "Lymphatic or Blood",
+                "Pancreas")) +
+  transition_reveal(ddeduc)
+
+anim_save("src/educ_deaths_cancer.gif", animation = anim2)

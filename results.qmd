@@ -75,6 +75,8 @@ ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate, co
                 "Pancreas")) 
 ```
 
+![](src/educ_deaths_cancer.gif)
+
 ```{r echo=FALSE}
 # line plots over time by cancer type and education
 ggplot(data=educCancerRates, mapping=aes(x=ddodyear, y=rate_per_100k, color=ddeduc))+ geom_point() +
@@ -99,6 +101,7 @@ ggplot(data=educCancerRates, mapping=aes(x=ddodyear, y=rate_per_100k, color=dded
     )
   )
 ```
+
 ```{r echo=FALSE}
 educCancerRatesOverall$ddeduc <- as.factor(educCancerRatesOverall$ddeduc)
 ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y = total_death_rate, fill=ddeduc)) +
@@ -123,6 +126,7 @@ ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y = total_death_rate, 
     )
   )
 ```
+
 ```{r echo=FALSE}
 # bar graph of overall death rates by educ
 ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y = (total_death_rate), fill=ddeduc)) +
@@ -148,7 +152,6 @@ ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y = (total_death_rate)
   ) # level 3 has the most death rates
 ```
 
-
 ```{r echo=FALSE}
 # top cancers per year line chart 
 ggplot(data=cancerRatesOverall, mapping=aes(x=ddodyear, y=total_death_rate, color=category))+
@@ -170,6 +173,9 @@ ggplot(data=cancerRatesOverall, mapping=aes(x=ddodyear, y=total_death_rate, colo
     )
   ) 
 ```
+
+![](src/time_deaths_cancer.gif)
+
 ```{r}
 ggplot(data=educRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate))+
   geom_point() + geom_smooth(method="lm") + labs(title="Education Level vs Cancer Death Rate", x="Education Level", y="Avg Death Rate Per 100k")+
@@ -220,5 +226,3 @@ ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate, co
             hjust = 0.15, vjust = -0.5, size = 3.5, show.legend = FALSE)
 
 ```
-
-
