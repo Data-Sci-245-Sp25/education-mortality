@@ -84,7 +84,7 @@ ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate, co
 :::
 :::
 
-```{r echo=FALSE}
+```{r echo=FALSE, fig.width=15, fig.height=5}
 # line plots over time by cancer type and education
 ggplot(data=educCancerRates, mapping=aes(x=ddodyear, y=rate_per_100k, color=ddeduc))+ geom_point() +
   geom_line() + facet_wrap(~category) + labs(title= "Cancer Rates by Education Over Time", x="Year", y="Death Rate Per 100k People") +
@@ -164,7 +164,7 @@ ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y = (total_death_rate)
 </div>
 <div style="flex: 1;">
 
-```{r echo=FALSE, fig.width=5, fig.height=3}
+```{r echo=FALSE,fig.width=10, fig.height=5}
 # top cancers per year line chart 
 ggplot(data=cancerRatesOverall, mapping=aes(x=ddodyear, y=total_death_rate, color=category))+
   geom_point() +geom_line()+ labs(title= "Top Cancers Over Time", x="Year", y="Total Death Rate Per 100k People") +
@@ -186,7 +186,7 @@ ggplot(data=cancerRatesOverall, mapping=aes(x=ddodyear, y=total_death_rate, colo
   ) 
 ```
 </div> </div>
-```{r}
+```{r echo=FALSE}
 ggplot(data=educRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate))+
   geom_point() + geom_smooth(method="lm") + labs(title="Education Level vs Cancer Death Rate", x="Education Level", y="Avg Death Rate Per 100k")+
   theme(
