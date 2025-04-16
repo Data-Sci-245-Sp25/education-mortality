@@ -53,7 +53,7 @@ cancerRatesOverall <- cancerRatesOverall |>
 #knitr::opts_chunk$set(fig.width=10, fig.height=5)
 
 ```
-<p> First we can look more generally at the mortality rates of each cancer type over the past 10 years. Here we see that Lung cancer is significantly more prominent than all of the other cancers, with Breast cancer close behind and the last 3 further below. There also seems to be some fluctuation over time, with a spike in mortality rates for most cancer types in 2015, 2020, and 2022 and a dip in 2021.</p>
+<p> First we can look more generally at the mortality rates of each cancer type over the past 10 years. Here we see that lung cancer is significantly more prominent than all of the other cancers, with breast cancer close behind and the last 3 further below. There also seems to be some fluctuation over time, with a spike in mortality rates for most cancer types in 2015, 2020, and 2022 and a dip in 2021.</p>
 <div style="display: flex; gap: 20px; align-items: center;">
 <div style="flex: 1;">
   <img src="src/time_deaths_cancer.gif" alt="Animation" style="width:100%;">
@@ -82,7 +82,7 @@ ggplot(data=cancerRatesOverall, mapping=aes(x=ddodyear, y=total_death_rate, colo
   ) 
 ```
 </div> </div>
-<p>Next, we can look at the same line plot, now stratified education level. Similarly to above, we see a prominent difference in Lung cancer mortality rates compared to all other cancer types. Looking at the education level trends, we see many of the orange lines higher up, indicating higher mortality rates for lower education levels.</p>
+<p>Next, we can look at the same line plot, now stratified education level. Similarly to above, we see a prominent difference in lung cancer mortality rates compared to all other cancer types. Looking at the education level trends, we see many of the orange lines higher up, indicating higher mortality rates for lower education levels.</p>
 ```{r echo=FALSE, fig.width=15, fig.height=10}
 # line plots over time by cancer type and education
 ggplot(data=educCancerRates, mapping=aes(x=ddodyear, y=rate_per_100k, color=ddeduc))+ geom_point() +
@@ -188,7 +188,7 @@ ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate, co
 :::
 :::
 <p>Lastly, we decided to look at the correlation between education level and mortality rate. Here we see a moderately negative correlation, with a R^2 value of 0.546. While not super strong, we indeed see correlation between higher education levels leading to lower mortality rates. </p>
-```{r echo=FALSE}
+```{r echo=FALSE, message=FALSE}
 ggplot(data=educRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate))+
   geom_point() + geom_smooth(method="lm") + labs(title="Education Level vs Cancer Mortality Rate", x="Education Level", y="Mortality Rate per 100k People")+
   theme(
@@ -202,7 +202,7 @@ ggplot(data=educRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate))+
 # R^2: 0.546, moderately strong correlation
 ```
 <p>Further looking at this correlation stratified by cancer type, we see that lung cancer has a much stronger correlation (R^2=.601) compared to the other cancer types. Additionally, breast cancer has a notably lower correlation (R^2=.1195). Ultimately, we see that lung cancer mortality rates are more affected by education level than breast cancer mortality rates. </p>
-```{r echo=FALSE}
+```{r echo=FALSE, message=FALSE}
 educCancerRatesOverall$ddeduc <- as.numeric(educCancerRatesOverall$ddeduc)
 
 r2_labels <- educCancerRatesOverall |>
@@ -232,9 +232,10 @@ ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate, co
       "#5bc0de",
       "#d9534f",
       "#ffc107"  
-    ), labels=c("Breast", "Colon", "Lung", "Lymphatic or Blood",
-                "Pancreas"))+
-  geom_text(data = r2_labels, aes(x = x, y = y, label = label, color = category),
-            hjust = -0.3, vjust = -0.5, size = 2, show.legend = FALSE)
+    ), labels=c("Breast (R^2=.1195)", "Colon (R^2=.5399)", "Lung (R^2=.601)", "Lymphatic or Blood (R^2=.6498)",
+                "Pancreas (R^2=.5734)"))
+#+
+  #geom_text(data = r2_labels, aes(x = x, y = y, label = label, color = category),
+            #hjust = -0.3, vjust = -0.5, size = 2, show.legend = FALSE)
 
 ```

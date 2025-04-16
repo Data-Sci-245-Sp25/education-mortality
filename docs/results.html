@@ -141,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
 Results
 </h1>
 <p>
-First we can look more generally at the mortality rates of each cancer type over the past 10 years. Here we see that Lung cancer is significantly more prominent than all of the other cancers, with Breast cancer close behind and the last 3 further below. There also seems to be some fluctuation over time, with a spike in mortality rates for most cancer types in 2015, 2020, and 2022 and a dip in 2021.
+First we can look more generally at the mortality rates of each cancer type over the past 10 years. Here we see that lung cancer is significantly more prominent than all of the other cancers, with breast cancer close behind and the last 3 further below. There also seems to be some fluctuation over time, with a spike in mortality rates for most cancer types in 2015, 2020, and 2022 and a dip in 2021.
 </p>
 <div style="display: flex; gap: 20px; align-items: center;">
 <div style="flex: 1;">
@@ -160,7 +160,7 @@ First we can look more generally at the mortality rates of each cancer type over
 </div>
 </div>
 <p>
-Next, we can look at the same line plot, now stratified education level. Similarly to above, we see a prominent difference in Lung cancer mortality rates compared to all other cancer types. Looking at the education level trends, we see many of the orange lines higher up, indicating higher mortality rates for lower education levels.
+Next, we can look at the same line plot, now stratified education level. Similarly to above, we see a prominent difference in lung cancer mortality rates compared to all other cancer types. Looking at the education level trends, we see many of the orange lines higher up, indicating higher mortality rates for lower education levels.
 </p>
 <div class="cell">
 <div class="cell-output-display">
@@ -218,9 +218,6 @@ Looking at a similar graph but in line-chart form we can better visualize this s
 Lastly, we decided to look at the correlation between education level and mortality rate. Here we see a moderately negative correlation, with a R^2 value of 0.546. While not super strong, we indeed see correlation between higher education levels leading to lower mortality rates.
 </p>
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -233,9 +230,6 @@ Lastly, we decided to look at the correlation between education level and mortal
 Further looking at this correlation stratified by cancer type, we see that lung cancer has a much stronger correlation (R^2=.601) compared to the other cancer types. Additionally, breast cancer has a notably lower correlation (R^2=.1195). Ultimately, we see that lung cancer mortality rates are more affected by education level than breast cancer mortality rates.
 </p>
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
