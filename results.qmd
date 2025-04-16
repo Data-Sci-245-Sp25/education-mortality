@@ -1,6 +1,5 @@
 <h1>Results</h1>
 
-Emily
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 # setup
@@ -55,6 +54,34 @@ cancerRatesOverall <- cancerRatesOverall |>
 #knitr::opts_chunk$set(fig.width=10, fig.height=5)
 
 ```
+<div style="display: flex; gap: 20px; align-items: center;">
+<div style="flex: 1;">
+  <img src="src/time_deaths_cancer.gif" alt="Animation" style="width:100%;">
+</div>
+<div style="flex: 1;">
+
+```{r echo=FALSE,fig.width=10, fig.height=5}
+# top cancers per year line chart 
+ggplot(data=cancerRatesOverall, mapping=aes(x=ddodyear, y=total_death_rate, color=category))+
+  geom_point() +geom_line()+ labs(title= "Top Cancers Over Time", x="Year", y="Mortality Rate per 100k People") +
+  theme_minimal() + labs(fill = "Disease Site")+ scale_color_manual(values = c(
+    "#4e5d6c",
+    "#5cb85c",
+    "#5bc0de",
+    "#d9534f",
+    "#ffc107" 
+  ), labels=c("Breast", "Colon", "Lung", "Lymphatic or Blood",
+              "Pancreas")) + 
+  theme(
+    plot.title = element_text(
+      hjust = 0.5,     # 0 = left, 0.5 = center, 1 = right
+      size = 15,       # Font size
+      face = "bold",    # Optional: makes it bold
+      family = "Lato"
+    )
+  ) 
+```
+</div> </div>
 
 ::: {style="display: flex; gap: 20px; align-items: center;"}
 ::: {style="flex: 1;"}
@@ -65,7 +92,7 @@ cancerRatesOverall <- cancerRatesOverall |>
 ```{r echo=FALSE, fig.width=10, fig.height=5}
 # line plot of educ x death rate stratified by cancer type 
 ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate, color=category))+
-  geom_point() + geom_line()+ labs(title="Education Level vs Death Rate by Disease Site", x="Education Level", y="Avg Death Rate Per 100k")+
+  geom_point() + geom_line()+ labs(title="Education Level vs Mortality Rate by Disease Site", x="Education Level", y="Mortality Rate per 100k People")+
   theme(
     plot.title = element_text(
       hjust = 0.5,     # 0 = left, 0.5 = center, 1 = right
@@ -84,10 +111,10 @@ ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate, co
 :::
 :::
 
-```{r echo=FALSE, fig.width=15, fig.height=5}
+```{r echo=FALSE, fig.width=15, fig.height=10}
 # line plots over time by cancer type and education
 ggplot(data=educCancerRates, mapping=aes(x=ddodyear, y=rate_per_100k, color=ddeduc))+ geom_point() +
-  geom_line() + facet_wrap(~category) + labs(title= "Cancer Rates by Education Over Time", x="Year", y="Death Rate Per 100k People") +
+  geom_line() + facet_wrap(~category) + labs(title= "Cancer Mortality Rates by Education Over Time", x="Year", y="Mortality Rate Per 100k People") +
   theme_minimal() + labs(color = "Education Level") + scale_color_manual(values = c(
     "#D35400",  # Burnt orange
     "#C77938",  # Copper
@@ -109,10 +136,10 @@ ggplot(data=educCancerRates, mapping=aes(x=ddodyear, y=rate_per_100k, color=dded
   )
 ```
 
-```{r echo=FALSE}
+```{r echo=FALSE, fig.width=15, fig.height=10}
 educCancerRatesOverall$ddeduc <- as.factor(educCancerRatesOverall$ddeduc)
 ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y = total_death_rate, fill=ddeduc)) +
-  geom_col() + facet_wrap(~category, nrow=1) + labs(title= "Cancer Rates by Education", x="Education Level", y="Death Rate Per 100k People") +
+  geom_col() + facet_wrap(~category, nrow=1) + labs(title= "Cancer Mortality Rates by Education", x="Education Level", y="Mortality Rate per 100k People") +
   theme_minimal() + labs(color = "Education Level") + scale_fill_manual(values = c(
     "#D35400",  # Burnt orange
     "#C77938",  # Copper
@@ -137,7 +164,7 @@ ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y = total_death_rate, 
 ```{r echo=FALSE}
 # bar graph of overall death rates by educ
 ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y = (total_death_rate), fill=ddeduc)) +
-  geom_col()+ labs(title= "Total Cancer Death Rates by Education", x="Education Level", y="Total Death Rate Per 100k People") +
+  geom_col()+ labs(title= "Total Cancer Mortality Rates by Education", x="Education Level", y="Mortality Rate per 100k People") +
   theme_minimal() + labs(color = "Education Level") + scale_fill_manual(values = c(
     "#D35400",  # Burnt orange
     "#C77938",  # Copper
@@ -167,7 +194,7 @@ ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y = (total_death_rate)
 ```{r echo=FALSE,fig.width=10, fig.height=5}
 # top cancers per year line chart 
 ggplot(data=cancerRatesOverall, mapping=aes(x=ddodyear, y=total_death_rate, color=category))+
-  geom_point() +geom_line()+ labs(title= "Top Cancers Over Time", x="Year", y="Total Death Rate Per 100k People") +
+  geom_point() +geom_line()+ labs(title= "Top Cancers Over Time", x="Year", y="Mortality Rate per 100k People") +
   theme_minimal() + labs(fill = "Disease Site")+ scale_color_manual(values = c(
     "#4e5d6c",
     "#5cb85c",
@@ -188,7 +215,7 @@ ggplot(data=cancerRatesOverall, mapping=aes(x=ddodyear, y=total_death_rate, colo
 </div> </div>
 ```{r echo=FALSE}
 ggplot(data=educRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate))+
-  geom_point() + geom_smooth(method="lm") + labs(title="Education Level vs Cancer Death Rate", x="Education Level", y="Avg Death Rate Per 100k")+
+  geom_point() + geom_smooth(method="lm") + labs(title="Education Level vs Cancer Mortality Rate", x="Education Level", y="Mortality Rate per 100k People")+
   theme(
     plot.title = element_text(
       hjust = 0.5,     # 0 = left, 0.5 = center, 1 = right
@@ -217,7 +244,7 @@ r2_labels <- educCancerRatesOverall |>
   })
 
 ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate, color=category))+
-  geom_point() + geom_smooth(method="lm", se=FALSE) + labs(title="Education Level vs Death Rate by Disease Site", x="Education Level", y="Avg Death Rate Per 100k")+
+  geom_point() + geom_smooth(method="lm", se=FALSE) + labs(title="Education Level vs Mortality Rate by Disease Site", x="Education Level", y="Mortality Rate per 100k People")+
   theme(
     plot.title = element_text(
       hjust = 0.5,     # 0 = left, 0.5 = center, 1 = right
@@ -233,6 +260,6 @@ ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate, co
     ), labels=c("Breast", "Colon", "Lung", "Lymphatic or Blood",
                 "Pancreas"))+
   geom_text(data = r2_labels, aes(x = x, y = y, label = label, color = category),
-            hjust = 0, vjust = -0.5, size = 2, show.legend = FALSE)
+            hjust = -0.3, vjust = -0.5, size = 2, show.legend = FALSE)
 
 ```

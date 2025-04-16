@@ -278,7 +278,7 @@ ggplot(hs_above_rate) + geom_sf(mapping=aes(fill = rate))+ scale_fill_viridis(op
 
 # TESTING ANIMATION
 anim <- ggplot(data=cancerRatesOverall, mapping=aes(x=ddodyear, y=total_death_rate, color=category))+
-  geom_point() +geom_line()+ labs(title= "Top Cancers Over Time", x="Year", y="Total Death Rate Per 100k People") +
+  geom_point() +geom_line()+ labs(title= "Top Cancers Over Time", x="Year", y="Mortality Rate per 100k People") +
   theme_minimal() + labs(fill = "Disease Site")+ scale_color_manual(values = c(
     "#4e5d6c",
     "#5cb85c",
@@ -299,7 +299,7 @@ anim <- ggplot(data=cancerRatesOverall, mapping=aes(x=ddodyear, y=total_death_ra
 anim_save("src/time_deaths_cancer.gif", animation = anim)
 
 anim2 <- ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate, color=category))+
-  geom_point() + geom_line()+ labs(title="Education Level vs Death Rate by Disease Site", x="Education Level", y="Avg Death Rate Per 100k")+
+  geom_point() + geom_line()+ labs(title="Education Level vs Mortality Rate by Disease Site", x="Education Level", y="Mortality Rate per 100k People")+
   theme(
     plot.title = element_text(
       hjust = 0.5,     # 0 = left, 0.5 = center, 1 = right
