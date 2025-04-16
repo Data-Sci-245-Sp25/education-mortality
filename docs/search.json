@@ -1,26 +1,22 @@
 [
   {
-    "objectID": "background.html",
-    "href": "background.html",
-    "title": "\nBackground\n",
+    "objectID": "abstract.html",
+    "href": "abstract.html",
+    "title": "\nAbstract\n",
     "section": "",
-    "text": "Background\n\n\nCancer as a Leading Cause of Death\n\n\nCancer is one of the leading mortality causes worldwide. According to the World Health Organization (WHO), cancer was responsible for approximately 10 million deaths in 2020 WHO. There are myriad risk factors for cancer, including genetic predisposition, lifestyle choices, environmental factors, and access to healthcare services. However, there is increasing evidence that socioeconomic factors, such as education, play a significant role in both cancer prevention and survival.\n\n\nThe Role of Education in Health Outcomes\n\n\nEducation is often considered a key determinant of health outcomes. Numerous studies have demonstrated that individuals with higher levels of education tend to have better health outcomes, including lower mortality rates. This could be attributed to several factors\n\n\nHealth Literacy\n\nIndividuals with higher education levels are more likely to understand medical information, engage in preventative health behaviors, and make informed decisions about treatment options.\n\nAccess to Healthcare\n\nEducated individuals often have greater access to healthcare services, including cancer prevention programs, screenings, early diagnosis, and treatments.\n\nLifestyle Factors\n\nKnowledge is power. Education influences lifestyle choices, such as diet, exercise, smoking, and alcohol consumption, all of which are linked to cancer risk.\n\n\n\nCancer Mortality Rates and Socioeconomic Status (SES)\n\n\nSES includes education level, income, and occupation (all of which are intrinsically related to one-another), and has long been associated with cancer mortality rates. Studies have shown that individuals in lower SES groups tend to experience higher cancer mortality rates. This could be attributed to factors such as\n\n\nDelayed diagnosis and Treatment\n\nLower educational attainment may correlate with a lack of awareness about cancer symptoms or the importance of early detection, leading to later-stage diagnoses and poorer outcomes.\n\nHealth Behaviors\n\nPeople with lower education levels may be less likely to engage in preventive behaviors, such as cancer screening or avoiding risk factors (e.g., smoking).\n\nEnvironmental Exposures\n\nLower-income populations may also face greater exposure to environmental risk factors, such as pollution or hazardous working conditions, which are linked to certain types of cancer.\n\n\n\nEducational Inequalities in Cancer Mortality\n\n\nThe relationship between education and cancer mortality rates is complex and multifaceted. Some studies have found that people with higher levels of education are not only less likely to develop cancer but also more likely to survive cancer if diagnosed. Conversely, lower educational attainment often correlates with higher cancer mortality rates, even after controlling for factors like age, sex, and geographical location.\n\n\nWhile the link between education and cancer mortality has been widely studied, it remains important to examine how education-related disparities can be addressed to reduce cancer mortality, particularly in undeserved or marginalized populations. Public health efforts that increase education about cancer prevention, promote early screening, and ensure equitable access to healthcare could significantly lower cancer-related deaths.\n\n\nResearch indicates a significant inverse relationship between educational attainment and cancer mortality rates in the United States. Individuals with lower levels of education experience higher cancer mortality rates compared to those with higher education levels.\n\n\nA study analyzing data from 8.2 million death certificates between 1989 and 2018 found that individuals with less than a high school diploma had higher cancer mortality rates than their more educated counterparts. This disparity was more pronounced among non-Hispanic white males and females compared to non-Hispanic black individuals. The study also noted that while cancer mortality rates have declined overall, the reduction was less significant among individuals with lower educational attainment, leading to a widening mortality gap over time.\n\n\nThe role of education on Cancer amenable mortality among non-Hispanic blacks & non-Hispanic whites in the United States (1989–2018) \n\n\nLung cancer deaths contribute significantly to educational disparities in cancer mortality, accounting for over half (53%) of the relative difference in the United States. Efforts to reduce smoking, which is more prevalent among individuals with lower education levels, are essential in addressing this disparity.\n\n\nLeading cancers contributing to educational disparities in cancer mortality in the US, 2017 \n\n\nFurthermore, individuals with lower educational attainment often have higher allostatic load—a measure of cumulative physiological stress—which has been associated with a more than fourfold increase in cancer mortality risk compared to those with lower allostatic load and higher education levels.\n\n\nAllostatic Load, Educational Attainment, and Risk of Cancer Mortality Among US Men\n\n\nA study found that lower educational attainment is linked to higher cancer mortality among Black and White adults in the U.S. Individuals without a high school diploma had a significantly increased risk of dying from cancer. Social determinants of health, such as income and healthcare access, partially explained this link, while health behaviors like smoking and physical activity did not. Addressing socioeconomic disparities could help reduce cancer mortality rates among less-educated individuals.\n\n\nAssociation of educational attainment with cancer mortality in a national cohort study of black and white adults: A mediation analysis",
+    "text": "Abstract\n\nSophie",
     "crumbs": [
-      "Background"
+      "Abstract"
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Sophie",
+    "objectID": "results.html",
+    "href": "results.html",
+    "title": "\nResults\n",
     "section": "",
-<<<<<<< HEAD
-    "text": "Sophie\n\nHome Page\n\n\nThis is our project.\n\n\nWe are looking at the top 3 types of cancer by the year.\n\n\nWe are curious about the connection between cancer mortality and education status.\n\n\nWe are using Multnomah County data sets.\n\n\nWe are also combining that data with tinycenus information based off of tracts to find age adjusted rates.",
-=======
     "text": "Results\n\nEmily\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n\n\n`geom_smooth()` using formula = 'y ~ x'",
->>>>>>> 393f6e873d64898fc7fc8f97e268cb268d2e3f02
     "crumbs": [
-      "Home"
+      "Results and Findings"
     ]
   },
   {
@@ -34,13 +30,23 @@
     ]
   },
   {
-    "objectID": "results.html",
-    "href": "results.html",
-    "title": "\nResults\n",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Sophie",
     "section": "",
-    "text": "Results\n\nEmily",
+    "text": "Sophie\n\nHome Page\n\n\nThis is our project.\n\n\nWe are looking at the top 3 types of cancer by the year.\n\n\nWe are curious about the connection between cancer mortality and education status.\n\n\nWe are using Multnomah County data sets.\n\n\nWe are also combining that data with tinycenus information based off of tracts to find age adjusted rates.",
     "crumbs": [
-      "Results and Findings"
+      "Home"
+    ]
+  },
+  {
+    "objectID": "background.html",
+    "href": "background.html",
+    "title": "\nBackground\n",
+    "section": "",
+    "text": "Background\n\n\nCancer as a Leading Cause of Death\n\n\nCancer is one of the leading mortality causes worldwide. According to the World Health Organization (WHO), cancer was responsible for approximately 10 million deaths in 2020 WHO. There are myriad risk factors for cancer, including genetic predisposition, lifestyle choices, environmental factors, and access to healthcare services. However, there is increasing evidence that socioeconomic factors, such as education, play a significant role in both cancer prevention and survival.\n\n\nThe Role of Education in Health Outcomes\n\n\nEducation is often considered a key determinant of health outcomes. Numerous studies have demonstrated that individuals with higher levels of education tend to have better health outcomes, including lower mortality rates. This could be attributed to several factors\n\n\nHealth Literacy\n\nIndividuals with higher education levels are more likely to understand medical information, engage in preventative health behaviors, and make informed decisions about treatment options.\n\nAccess to Healthcare\n\nEducated individuals often have greater access to healthcare services, including cancer prevention programs, screenings, early diagnosis, and treatments.\n\nLifestyle Factors\n\nKnowledge is power. Education influences lifestyle choices, such as diet, exercise, smoking, and alcohol consumption, all of which are linked to cancer risk.\n\n\n\nCancer Mortality Rates and Socioeconomic Status (SES)\n\n\nSES includes education level, income, and occupation (all of which are intrinsically related to one-another), and has long been associated with cancer mortality rates. Studies have shown that individuals in lower SES groups tend to experience higher cancer mortality rates. This could be attributed to factors such as\n\n\nDelayed diagnosis and Treatment\n\nLower educational attainment may correlate with a lack of awareness about cancer symptoms or the importance of early detection, leading to later-stage diagnoses and poorer outcomes.\n\nHealth Behaviors\n\nPeople with lower education levels may be less likely to engage in preventive behaviors, such as cancer screening or avoiding risk factors (e.g., smoking).\n\nEnvironmental Exposures\n\nLower-income populations may also face greater exposure to environmental risk factors, such as pollution or hazardous working conditions, which are linked to certain types of cancer.\n\n\n\nEducational Inequalities in Cancer Mortality\n\n\nThe relationship between education and cancer mortality rates is complex and multifaceted. Some studies have found that people with higher levels of education are not only less likely to develop cancer but also more likely to survive cancer if diagnosed. Conversely, lower educational attainment often correlates with higher cancer mortality rates, even after controlling for factors like age, sex, and geographical location.\n\n\nWhile the link between education and cancer mortality has been widely studied, it remains important to examine how education-related disparities can be addressed to reduce cancer mortality, particularly in undeserved or marginalized populations. Public health efforts that increase education about cancer prevention, promote early screening, and ensure equitable access to healthcare could significantly lower cancer-related deaths.\n\n\nResearch indicates a significant inverse relationship between educational attainment and cancer mortality rates in the United States. Individuals with lower levels of education experience higher cancer mortality rates compared to those with higher education levels.\n\n\nA study analyzing data from 8.2 million death certificates between 1989 and 2018 found that individuals with less than a high school diploma had higher cancer mortality rates than their more educated counterparts. This disparity was more pronounced among non-Hispanic white males and females compared to non-Hispanic black individuals. The study also noted that while cancer mortality rates have declined overall, the reduction was less significant among individuals with lower educational attainment, leading to a widening mortality gap over time.\n\n\nThe role of education on Cancer amenable mortality among non-Hispanic blacks & non-Hispanic whites in the United States (1989–2018) \n\n\nLung cancer deaths contribute significantly to educational disparities in cancer mortality, accounting for over half (53%) of the relative difference in the United States. Efforts to reduce smoking, which is more prevalent among individuals with lower education levels, are essential in addressing this disparity.\n\n\nLeading cancers contributing to educational disparities in cancer mortality in the US, 2017 \n\n\nFurthermore, individuals with lower educational attainment often have higher allostatic load—a measure of cumulative physiological stress—which has been associated with a more than fourfold increase in cancer mortality risk compared to those with lower allostatic load and higher education levels.\n\n\nAllostatic Load, Educational Attainment, and Risk of Cancer Mortality Among US Men\n\n\nA study found that lower educational attainment is linked to higher cancer mortality among Black and White adults in the U.S. Individuals without a high school diploma had a significantly increased risk of dying from cancer. Social determinants of health, such as income and healthcare access, partially explained this link, while health behaviors like smoking and physical activity did not. Addressing socioeconomic disparities could help reduce cancer mortality rates among less-educated individuals.\n\n\nAssociation of educational attainment with cancer mortality in a national cohort study of black and white adults: A mediation analysis",
+    "crumbs": [
+      "Background"
     ]
   },
   {
@@ -48,19 +54,9 @@
     "href": "methods.html",
     "title": "\nMethods\n",
     "section": "",
-    "text": "Methods\n\nEmily",
+    "text": "Methods\n\n\nIn order to further investigate our question we began with raw data provided by the Multnomah County Health Department which included all mortalities within the county from 2006 to 2023. We then limited our data set to only cancer-related deaths and loaded in our ICD codes in order to match each code with its corresponding disease site. Once each cancer mortality was matched with its disease site, we were able to accumulate the counts by disease site and year. This enabled us to pinpoint the top cancers we would focus on. Since the top 3 cancers varied by year we decided to choose all 5 that show up at least once within the top 3: “Lung”, “Pancreas”, “Breast”, “Colon”, and “Lymphatic or Blood.”\n\n\nAfter successfully narrowing our data down to these specific cancer types, we identified our variable of concern “ddeduc” and narrowed the time to 10 years (2014-2023). For our final clean-up steps we removed male cases of breast cancer (since an overwhelming amount are female) and removed “other” or “NaN” values for “ddeduc.”\n\n\nNow that we had our aggregated data, we were then able to move everything off of our secure Rstudio server and combine our data with TidyCensus. This incorporation of population data enabled us to look at rates instead of raw counts of mortality in the county. After loading in our TidyCensus data and identifying our variable of concern: B15002, “Sex by Educational Attainment”, we pulled in Multnomah county population data from 2014-2023 (by sex in order to account for the fact that all of our Breast cancer cases are female). Since TidyCensus had several more education levels than our aggregated data, we had to then bin each category so we were able to match up our population counts with our education levels in our aggregated data. Finally, we calculated our new rate variable (per 100k people) by finding the percentage of each mortality count over the population and then multiplying by 100000. This gives us a better idea of the actual rate of each cancer mortality by education level relative to the total population.\n\n\nOnce we successfully cleaned up our data and calculated the rates using TidyCensus, we were finally able to begin our analysis. We primarily focused on using ggplot to create data visualizations so that we could better see the relationships among our many variables. Since our data was stratified by so many variables (education, year, and disease site) we created a combination of line graphs and histograms to better visualize these relationships. While many visualizations were fairly straightforward in displaying our cumulative rates and rates over time, we conducted one statistical analysis in order to analyze the correlation between education level and mortality rate. After using ggplot to graph these lines of best fit, we used R’s tools to identify the R^2 value in order to further understand the strength of the correlation.",
     "crumbs": [
       "Methods"
-    ]
-  },
-  {
-    "objectID": "abstract.html",
-    "href": "abstract.html",
-    "title": "\nAbstract\n",
-    "section": "",
-    "text": "Abstract\n\nSophie",
-    "crumbs": [
-      "Abstract"
     ]
   },
   {
