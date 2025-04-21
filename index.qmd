@@ -4,7 +4,7 @@ Home Page
 
 </h2>
 
-<img src="mc_logo.jpg" alt="Mult. County Logo"/> <img src="lc_logo.jpg" alt="LC Logo"/>
+<img src="docs/mc_logo.jpg" alt="Mult. County Logo"/> <img src="docs/lc_logo.jpg" alt="LC Logo"/>
 
 <p>Hello, we are Emily Strand and Sophie Homolka.</p>
 
