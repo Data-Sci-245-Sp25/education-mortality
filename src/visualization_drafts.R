@@ -224,34 +224,40 @@ ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y=total_death_rate, co
 model <- lm(total_death_rate ~ ddeduc, data = educCancerRatesOverall)
 # View the summary
 summary(model)
+coef(model)
 
-# LUNG: R^2=.601, p-value=.02381
+# LUNG: R^2=.601, p-value=.02381, slope=-8.32
 model <- educCancerRatesOverall |>
   subset(category == "Lung") |>
   lm(total_death_rate ~ ddeduc, data = _)
 summary(model)
-# BREAST: R^2=.1195, p-value=.4017
+coef(model)
+# BREAST: R^2=.1195, p-value=.4017, slope=-1.11
 model <- educCancerRatesOverall |>
   subset(category == "Breast") |>
   lm(total_death_rate ~ ddeduc, data = _)
 summary(model)
-# COLON: R^2=.5399, p-value=.03786
+coef(model)
+# COLON: R^2=.5399, p-value=.03786, slope=-1.28
 model <- educCancerRatesOverall |>
   subset(category == "Colon") |>
   lm(total_death_rate ~ ddeduc, data = _)
 summary(model)
-# LYMPHATIC OR BLOOD: R^2=.6498, p-value=.01568
+coef(model)
+# LYMPHATIC OR BLOOD: R^2=.6498, p-value=.01568, slope=-1.56
 model <- educCancerRatesOverall |>
   subset(category == "Lymphatic or Blood") |>
   lm(total_death_rate ~ ddeduc, data = _)
 summary(model)
-# PANCREAS: R^2=.5734, p-value=.02958
+coef(model)
+# PANCREAS: R^2=.5734, p-value=.02958, slope=-1.32
 model <- educCancerRatesOverall |>
   subset(category == "Pancreas") |>
   lm(total_death_rate ~ ddeduc, data = _)
 summary(model)
+coef(model)
 
-# MAPS (may need to re-merge data with tidycensus...)
+# MAPmodel.response()# MAPS (may need to re-merge data with tidycensus...)
 #ggplot() + geom_sf(data= educCancerRates, aes(fill=educCancerRates$rate_per_100k))
 
 # EDUCATION MAPS
