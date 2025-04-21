@@ -4,73 +4,52 @@ editor:
   markdown: 
     wrap: 72
 ---
-
 <h1>Background</h1>
-
 <h2>Cancer as a Leading Cause of Death</h2>
-
 <p>Cancer is one of the leading mortality causes worldwide. According to
-the World Health Organization (WHO), cancer was responsible for
-approximately 10 million deaths in 2020 [WHO](https://bartinipdx.com/).
+the World Health Organization, cancer was responsible for
+approximately 10 million deaths in 2020 [WHO](https://www.who.int/en/news-room/fact-sheets/detail/cancer).
 There are myriad risk factors for cancer, including genetic
-predisposition, lifestyle choices, environmental factors, and access to
-healthcare services. However, there is increasing evidence that
+predisposition, lifestyle choices, environmental factors, and access to healthcare services. However, there is increasing evidence that
 socioeconomic factors, such as education, play a significant role in
 both cancer prevention and survival.</p>
-
 <h2>The Role of Education in Health Outcomes</h2>
-
 <p>Education is often considered a key determinant of health outcomes.
 Numerous studies have demonstrated that individuals with higher levels
 of education tend to have better health outcomes, including lower
 mortality rates. This could be attributed to several factors</p>
-
 -   Health Literacy
-
     -   Individuals with higher education levels are more likely to
         understand medical information, engage in preventative health
         behaviors, and make informed decisions about treatment options.
-
 -   Access to Healthcare
-
     -   Educated individuals often have greater access to healthcare
         services, including cancer prevention programs, screenings,
         early diagnosis, and treatments.
 
 -   Lifestyle Factors
-
     -   Knowledge is power. Education influences lifestyle choices, such
         as diet, exercise, smoking, and alcohol consumption, all of
         which are linked to cancer risk.
-
 <h2>Cancer Mortality Rates and Socioeconomic Status (SES)</h2>
-
 <p>SES includes education level, income, and occupation (all of which
 are intrinsically related to one-another), and has long been associated
 with cancer mortality rates. Studies have shown that individuals in
 lower SES groups tend to experience higher cancer mortality rates. This
 could be attributed to factors such as</p>
-
 -   Delayed diagnosis and Treatment
-
     -   Lower educational attainment may correlate with a lack of
         awareness about cancer symptoms or the importance of early
         detection, leading to later-stage diagnoses and poorer outcomes.
-
 -   Health Behaviors
-
     -   People with lower education levels may be less likely to engage
         in preventive behaviors, such as cancer screening or avoiding
         risk factors (e.g., smoking).
-
 -   Environmental Exposures
-
     -   Lower-income populations may also face greater exposure to
         environmental risk factors, such as pollution or hazardous
         working conditions, which are linked to certain types of cancer.
-
 <h2>Educational Inequalities in Cancer Mortality</h2>
-
 <p>The relationship between education and cancer mortality rates is
 complex and multifaceted. Some studies have found that people with
 higher levels of education are not only less likely to develop cancer
@@ -78,48 +57,33 @@ but also more likely to survive cancer if diagnosed. Conversely, lower
 educational attainment often correlates with higher cancer mortality
 rates, even after controlling for factors like age, sex, and
 geographical location.</p>
-
-<p>While the link between education and cancer mortality has been widely
-studied, it remains important to examine how education-related
-disparities can be addressed to reduce cancer mortality, particularly in
-undeserved or marginalized populations. Public health efforts that
-increase education about cancer prevention, promote early screening, and
-ensure equitable access to healthcare could significantly lower
+<p>While the link between education and cancer mortality has been widely studied, it remains important to examine how education-related
+disparities can be addressed to reduce cancer mortality, particularly in underserved or marginalized populations. Public health efforts that
+increase education about cancer prevention, promote early screening, and ensure equitable access to healthcare could significantly lower
 cancer-related deaths.</p>
 
+<h2>Previous Research</h2>
 <p>Research indicates a significant inverse relationship between
-educational attainment and cancer mortality rates in the United States.
-Individuals with lower levels of education experience higher cancer
-mortality rates compared to those with higher education levels.</p>
+educational attainment and cancer mortality rates in the United States. Individuals with lower levels of education experience higher cancer mortality rates compared to those with higher education levels.</p>
 
 <p>A study analyzing data from 8.2 million death certificates between
 1989 and 2018 found that individuals with less than a high school
 diploma had higher cancer mortality rates than their more educated
 counterparts. This disparity was more pronounced among non-Hispanic
-white males and females compared to non-Hispanic black individuals. The
-study also noted that while cancer mortality rates have declined
-overall, the reduction was less significant among individuals with lower
-educational attainment, leading to a widening mortality gap over
-time.</p>
-
-<p><small>The role of education on Cancer amenable mortality among
-non-Hispanic blacks & non-Hispanic whites in the United States
-(1989–2018) </small></p>
+white males and females compared to non-Hispanic black individuals. The study also noted that while cancer mortality rates have declined
+overall, the reduction was less significant among individuals with lower educational attainment, leading to a widening mortality gap over
+time [BMC] (https://bmccancer.biomedcentral.com/articles/10.1186/s12885-021-08633-7).</p>
 
 <p>Lung cancer deaths contribute significantly to educational
 disparities in cancer mortality, accounting for over half (53%) of the
 relative difference in the United States. Efforts to reduce smoking,
 which is more prevalent among individuals with lower education levels,
-are essential in addressing this disparity.</p>
+are essential in addressing this disparity. [Research Gate] (https://www.researchgate.net/publication/353142315_Leading_cancers_contributing_to_educational_disparities_in_cancer_mortality_in_the_US_2017)</p>
 
-<p><small>Leading cancers contributing to educational disparities in
-cancer mortality in the US, 2017 </small></p>
-
-<p>Furthermore, individuals with lower educational attainment often have
-higher allostatic load—a measure of cumulative physiological
+<p>Furthermore, individuals with lower educational attainment often have higher allostatic load—a measure of cumulative physiological
 stress—which has been associated with a more than fourfold increase in
 cancer mortality risk compared to those with lower allostatic load and
-higher education levels.</p>
+higher education levels [JAMA] (https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2827623).</p>
 
 <p><small>Allostatic Load, Educational Attainment, and Risk of Cancer
 Mortality Among US Men</small></p>
@@ -128,11 +92,7 @@ Mortality Among US Men</small></p>
 cancer mortality among Black and White adults in the U.S. Individuals
 without a high school diploma had a significantly increased risk of
 dying from cancer. Social determinants of health, such as income and
-healthcare access, partially explained this link, while health behaviors
-like smoking and physical activity did not. Addressing socioeconomic
-disparities could help reduce cancer mortality rates among less-educated
-individuals.</p>
+healthcare access, partially explained this link, while health behaviors like smoking and physical activity did not. Addressing socioeconomic
+disparities could help reduce cancer mortality rates among less-educated individuals [NIH] (https://pubmed.ncbi.nlm.nih.gov/37954012/).</p>
 
-<p><small>Association of educational attainment with cancer mortality in
-a national cohort study of black and white adults: A mediation
-analysis</small></p>
+<p>The relationship between education and cancer mortality underscores the crucial role that socioeconomic factors play in shaping health outcomes. Higher levels of education are linked to better health literacy, improved access to healthcare, and healthier lifestyle choices, all of which contribute to reduced cancer risk and improved survival rates. Conversely, lower educational attainment correlates with higher cancer mortality, driven by factors such as delayed diagnosis, poorer health behaviors, and greater exposure to environmental risk factors. Addressing educational inequalities, through targeted public health campaigns and improved access to cancer prevention and treatment, is essential in reducing the global cancer burden. By focusing on education and access, we can significantly reduce the disparities in cancer outcomes and work towards a more equitable and healthier society.</p>
