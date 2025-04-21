@@ -132,7 +132,7 @@ ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y = total_death_rate, 
     )
   )
 ```
-<p>By further simplifying our graph and looking at total mortality rates by education level, we once again see a prominent spike in mortality rates for those with their high school diploma or GED. Our trend of higher mortality rates for lower education levels remains consistent.</p>
+<p>By further simplifying our graph and looking at total mortality rates by education level, we once again see a prominent spike in mortality rates for those with their high school diploma or GED. Our trend of higher mortality rates for lower education levels remains consistent. This makes sense since higher education levels indicate higher income and an ability to both diagnose and treat cancer. For education levels below high school diploma having lower rates than high school diploma, this is likely due to an inability to diagnose their cancer in the first place as a result of lower income. </p>
 ```{r echo=FALSE}
 # bar graph of overall death rates by educ
 ggplot(data=educCancerRatesOverall, mapping=aes(x=ddeduc, y = (total_death_rate), fill=ddeduc)) +
