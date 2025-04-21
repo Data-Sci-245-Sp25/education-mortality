@@ -72,27 +72,23 @@ diploma had higher cancer mortality rates than their more educated
 counterparts. This disparity was more pronounced among non-Hispanic
 white males and females compared to non-Hispanic black individuals. The study also noted that while cancer mortality rates have declined
 overall, the reduction was less significant among individuals with lower educational attainment, leading to a widening mortality gap over
-time [BMC] (https://bmccancer.biomedcentral.com/articles/10.1186/s12885-021-08633-7).</p>
+time [BMC](https://bmccancer.biomedcentral.com/articles/10.1186/s12885-021-08633-7).</p>
 
-<p>Lung cancer deaths contribute significantly to educational
+<p>Regarding specific cancer sites, lung cancer deaths contribute significantly to educational
 disparities in cancer mortality, accounting for over half (53%) of the
 relative difference in the United States. Efforts to reduce smoking,
 which is more prevalent among individuals with lower education levels,
-are essential in addressing this disparity. [Research Gate] (https://www.researchgate.net/publication/353142315_Leading_cancers_contributing_to_educational_disparities_in_cancer_mortality_in_the_US_2017)</p>
+are essential in addressing this disparity. [Research Gate](https://www.researchgate.net/publication/353142315_Leading_cancers_contributing_to_educational_disparities_in_cancer_mortality_in_the_US_2017)</p>
 
 <p>Furthermore, individuals with lower educational attainment often have higher allostatic load—a measure of cumulative physiological
 stress—which has been associated with a more than fourfold increase in
 cancer mortality risk compared to those with lower allostatic load and
-higher education levels [JAMA] (https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2827623).</p>
+higher education levels [JAMA](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2827623).</p>
 
-<p><small>Allostatic Load, Educational Attainment, and Risk of Cancer
-Mortality Among US Men</small></p>
-
-<p>A study found that lower educational attainment is linked to higher
-cancer mortality among Black and White adults in the U.S. Individuals
+<p>Another study found that lower educational attainment is linked to higher cancer mortality among Black and White adults in the U.S. Individuals
 without a high school diploma had a significantly increased risk of
 dying from cancer. Social determinants of health, such as income and
 healthcare access, partially explained this link, while health behaviors like smoking and physical activity did not. Addressing socioeconomic
-disparities could help reduce cancer mortality rates among less-educated individuals [NIH] (https://pubmed.ncbi.nlm.nih.gov/37954012/).</p>
+disparities could help reduce cancer mortality rates among less-educated individuals [NIH](https://pubmed.ncbi.nlm.nih.gov/37954012/).</p>
 
 <p>The relationship between education and cancer mortality underscores the crucial role that socioeconomic factors play in shaping health outcomes. Higher levels of education are linked to better health literacy, improved access to healthcare, and healthier lifestyle choices, all of which contribute to reduced cancer risk and improved survival rates. Conversely, lower educational attainment correlates with higher cancer mortality, driven by factors such as delayed diagnosis, poorer health behaviors, and greater exposure to environmental risk factors. Addressing educational inequalities, through targeted public health campaigns and improved access to cancer prevention and treatment, is essential in reducing the global cancer burden. By focusing on education and access, we can significantly reduce the disparities in cancer outcomes and work towards a more equitable and healthier society.</p>
