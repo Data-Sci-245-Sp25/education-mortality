@@ -4,7 +4,7 @@
     "href": "abstract.html",
     "title": "\nAbstract\n",
     "section": "",
-    "text": "Abstract\n\nSophie",
+    "text": "Abstract",
     "crumbs": [
       "Abstract"
     ]
@@ -32,9 +32,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Sophie",
+    "title": "\nHome Page\n",
     "section": "",
-    "text": "Sophie\n\nHome Page\n\n\nHello, we are Emily Strand and Sophie Homolka.\n\n\nAbout Us\n\n\nWe are students studying mathematics and data science at Lewis and Clark College. For our data science capstone class, we are investigating the relationship between cancer mortality and education levels within Multnomah County. This project is a collaboration between our school and the Multnomah County Health Department.",
+    "text": "Home Page\n\n \n\nHello, we are Emily Strand and Sophie Homolka.\n\n\nAbout Us\n\n\nWe are students studying mathematics and data science at Lewis and Clark College. For our data science capstone class, we are investigating the relationship between cancer mortality and education levels within Multnomah County. This project is a collaboration between our school and the Multnomah County Health Department.",
     "crumbs": [
       "Home"
     ]
@@ -64,7 +64,7 @@
     "href": "conclusion.html",
     "title": "\nConclusion\n",
     "section": "",
-    "text": "Conclusion\n\nSophie We have, of course not found novel information through this study. We have seen time and time again how negative health outcomes are more prevalent in people of lower SES categories and more marginalized groups. But, this does not mean this work is meaningless. By combining the work of all of our projects, we are able to identify how these patterns appear in OUR community. If we look at geography, we can note that those with lower SES tend to live in the Southwest region… also remember that formal education is not an indicator of who someone is as a person or their worth. Also not a signal of intelligence.",
+    "text": "Conclusion\n\nWe have, of course not found novel information through this study. We have seen time and time again how negative health outcomes are more prevalent in people of lower SES categories and more marginalized groups. But, this does not mean this work is meaningless. By combining the work of all of our projects, we are able to identify how these patterns appear in OUR community. If we look at geography, we can note that those with lower SES tend to live in the Southwest region… also remember that formal education is not an indicator of who someone is as a person or their worth. Also not a signal of intelligence.",
     "crumbs": [
       "Conclusion"
     ]

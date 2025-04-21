@@ -1,5 +1,13 @@
-# Sophie
-<h1>Home Page</h2>
+<h1>
+
+Home Page
+
+</h2>
+
+<img src="mc_logo.jpg" alt="Mult. County Logo"/> <img src="lc_logo.jpg" alt="LC Logo"/>
+
 <p>Hello, we are Emily Strand and Sophie Homolka.</p>
+
 <h2>About Us</h2>
+
 <p>We are students studying mathematics and data science at Lewis and Clark College. For our data science capstone class, we are investigating the relationship between cancer mortality and education levels within Multnomah County. This project is a collaboration between our school and the Multnomah County Health Department.</p>
